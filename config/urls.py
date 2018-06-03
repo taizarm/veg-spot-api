@@ -19,5 +19,5 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include('vegspotapi.urls')),
+    url(r'^v1/', include(('vegspotapi.urls', 'app_v1'), namespace='v1')),
 ]
